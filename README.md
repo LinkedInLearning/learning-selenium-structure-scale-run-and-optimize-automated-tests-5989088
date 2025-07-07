@@ -1,5 +1,5 @@
-# COURSENAME
-This is the repository for the LinkedIn Learning course `course-name`. The full course is available from [LinkedIn Learning][lil-course-url].
+# Learning Selenium: Structure, Scale, Run, and Optimize Automated Tests
+This is the repository for the LinkedIn Learning course `Learning Selenium: Structure, Scale, Run, and Optimize Automated Tests`. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![lil-thumbnail-url]
 
