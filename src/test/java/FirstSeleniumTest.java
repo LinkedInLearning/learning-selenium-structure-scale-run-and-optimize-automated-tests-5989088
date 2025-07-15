@@ -16,30 +16,18 @@ public class FirstSeleniumTest extends BaseTest {
 	public void testContactFormSubmit() {
 		driver.get("https://practicesoftwaretesting.com/contact");
 
-		WebElement firstName = driver.findElement(By.id("first_name"));
-		WebElement lastName = driver.findElement(By.id("last_name"));
-		WebElement email = driver.findElement(By.id("email"));
-		WebElement subject = driver.findElement(By.id("subject"));
-		WebElement message = driver.findElement(By.id("message"));
-		WebElement btnSubmit = driver.findElement(By.className("btnSubmit"));
+		ContactPage contactPagePom = new ContactPage(driver);
 
 		//FillForm
-		firstName.sendKeys("John");
-		lastName.sendKeys("Smith");
-		email.sendKeys("john.smith@example.com");
-
-		Select subjectSelect = new Select(subject);
-		subjectSelect.selectByValue("webmaster");
-
-		message.sendKeys("Hello My name is John Smith, Please make sure we have got 50 characters in this message.");
+		contactPagePom.fillForm();
 
 		// Submit
-		btnSubmit.click();
+		contactPagePom.submitForm();
 
 		// Add explicit wait for the success alert to appear
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement alert = wait.until(
-			ExpectedConditions.visibilityOfElementLocated(By.className("alert"))
+			ExpectedConditions.visibilityOfElementLocated(contactPagePom.alertLoc)
 		);
 		String alertText = alert.getText().trim();
 
