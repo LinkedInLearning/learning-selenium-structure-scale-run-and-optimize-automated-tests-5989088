@@ -1,6 +1,6 @@
-# Chapter 02: Video 06
+# Chapter 02: Video 07
 
-This branch contains the code for **Chapter 02: Video 06** of the LinkedIn Learning course **"Learning Selenium: Structure, Scale, Run, and Optimize Automated Tests"**.
+This branch contains the code for **Chapter 02: Video 07** of the LinkedIn Learning course **"Learning Selenium: Structure, Scale, Run, and Optimize Automated Tests"**.
 
 ## 🎯 What You'll Learn
 

@@ -19,7 +19,7 @@ public class FirstSeleniumTest extends BaseTest {
 		ContactPage contactPagePom = new ContactPage(driver);
 
 		//FillForm
-		contactPagePom.fillForm();
+		contactPagePom.fillForm("John", "Smith", "john.smith@example.com", "webmaster", "Hello My name is John Smith, Please make sure we have got 50 characters in this message.");
 
 		// Submit
 		contactPagePom.submitForm();
