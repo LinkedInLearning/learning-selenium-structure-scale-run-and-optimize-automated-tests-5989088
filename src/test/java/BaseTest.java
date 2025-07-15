@@ -1,21 +1,30 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class BaseTest {
 	protected WebDriver driver;
 
 	@BeforeEach
 	public void setUp() {
-		WebDriverManager.chromedriver().setup();
+		String browser = System.getProperty("browser", "firefox").toLowerCase();
 
-		ChromeOptions options = new ChromeOptions();
-//		options.addArguments("--headless=new");
+		switch(browser) {
+			case "chrome":
+				driver = new ChromeDriver(new ChromeOptions());
+				break;
+			case "firefox":
+				driver = new FirefoxDriver(new FirefoxOptions());
+				break;
+			default:
+				driver = new ChromeDriver(new ChromeOptions());
+				break;
+		}
 
-		driver = new ChromeDriver(options);
 	}
 
 	@AfterEach
