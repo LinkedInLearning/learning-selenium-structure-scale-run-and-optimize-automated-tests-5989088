@@ -33,4 +33,26 @@ public class FirstSeleniumTest extends BaseTest {
 
 		assertEquals("Thanks for your message! We will contact you shortly.", alertText);
 	}
+
+	@Test
+	public void testContactFormSubmit2() {
+		driver.get("https://practicesoftwaretesting.com/contact");
+
+		ContactPage contactPagePom = new ContactPage(driver);
+
+		//FillForm
+		contactPagePom.fillForm("John", "Smith", "john.smith@example.com", "webmaster", "Hello My name is John Smith, Please make sure we have got 50 characters in this message.");
+
+		// Submit
+		contactPagePom.submitForm();
+
+		// Add explicit wait for the success alert to appear
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement alert = wait.until(
+			ExpectedConditions.visibilityOfElementLocated(contactPagePom.alertLoc)
+		);
+		String alertText = alert.getText().trim();
+
+		assertEquals("Thanks for your message! We will contact you shortly.", alertText);
+	}
 }
