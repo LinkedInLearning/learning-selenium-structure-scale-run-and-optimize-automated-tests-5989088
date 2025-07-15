@@ -11,12 +11,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoginTest extends BaseTest {
 
-	@Test
-	public void testLogin() {
+	@ParameterizedTest
+	@CsvFileSource(resources = "/login-data.csv", numLinesToSkip = 0)
+	public void testLoginWithMultipleUsers(String username, String password) {
 		driver.get("https://practicesoftwaretesting.com/auth/login");
 
 		LoginPage loginPagePom = new LoginPage(driver);
-		loginPagePom.loginAs("customer@practicesoftwaretesting.com", "welcome01");
+		loginPagePom.loginAs(username, password);
 
 		AccountPage accountPage = new AccountPage(driver);
 
