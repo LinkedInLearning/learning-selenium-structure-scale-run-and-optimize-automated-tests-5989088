@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -12,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LoginTest extends BaseTest {
 
 	@ParameterizedTest
+	@Tag("smoke")
 	@CsvFileSource(resources = "/login-data.csv", numLinesToSkip = 0)
 	public void testLoginWithMultipleUsers(String username, String password) {
 		driver.get("https://practicesoftwaretesting.com/auth/login");
