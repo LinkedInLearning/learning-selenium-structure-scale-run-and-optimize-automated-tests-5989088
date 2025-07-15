@@ -11,7 +11,7 @@ public class FirstSeleniumTest extends BaseTest {
 	@Test
 	public void checkContactHeading() {
 		driver.get("https://practicesoftwaretesting.com/contact");
-		WebElement heading = driver.findElement(By.tagName("h1"));
+		WebElement heading = driver.findElement(By.tagName("h3"));
 		String headingText = heading.getText();
 		assertEquals("Contact", headingText);
 
