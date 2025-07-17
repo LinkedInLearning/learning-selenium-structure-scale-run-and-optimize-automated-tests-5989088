@@ -3,33 +3,30 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class BaseTest {
 	protected WebDriver driver;
 
 	@BeforeEach
-	public void setUp() throws MalformedURLException {
-		String browser = System.getProperty("browser", "chrome").toLowerCase();
-		URL gridURL = new URL("http://localhost:4444");
+	public void setUp() throws IOException {
+		ChromeOptions chromeOptions = new ChromeOptions();
 
-		switch(browser) {
-			case "chrome":
-				driver = new RemoteWebDriver(gridURL, new ChromeOptions());
-				break;
-			case "firefox":
-				driver = new RemoteWebDriver(gridURL, new FirefoxOptions());
-				break;
-			default:
-				driver = new RemoteWebDriver(gridURL, new ChromeOptions());
-				break;
-		}
+		// Create temp profile dir
+		Path tempProfile = Files.createTempDirectory("chrome-profile");
+		chromeOptions.addArguments("--disable-blink-features=AutomationControlled");
+		chromeOptions.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.57 Safari/537.36");
 
+		chromeOptions.addArguments("--user-data-dir=" + tempProfile.toAbsolutePath().toString());
+
+		// Headless (optional)
+		chromeOptions.addArguments("--headless=new", "--no-sandbox", "--disable-dev-shm-usage");
+
+
+		driver = new ChromeDriver(chromeOptions);
 	}
 
 	@AfterEach

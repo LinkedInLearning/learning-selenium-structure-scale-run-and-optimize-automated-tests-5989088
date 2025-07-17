@@ -17,16 +17,16 @@ public class ContactPage {
 
 	By alertLoc = By.className("alert");
 
-	public void fillForm(String firstName, String lastName, String email, String subject, String message){
+	public void fillForm(){
 		//FillForm
-		driver.findElement(firstNameLoc).sendKeys(firstName);
-		driver.findElement(lastNameLoc).sendKeys(lastName);
-		driver.findElement(emailLoc).sendKeys(email);
+		driver.findElement(firstNameLoc).sendKeys("John");
+		driver.findElement(lastNameLoc).sendKeys("Smith");
+		driver.findElement(emailLoc).sendKeys("john.smith@example.com");
 
 		Select subjectSelect = new Select(driver.findElement(subjectLoc));
-		subjectSelect.selectByValue(subject);
+		subjectSelect.selectByValue("webmaster");
 
-		driver.findElement(messageLoc).sendKeys(message);
+		driver.findElement(messageLoc).sendKeys("Hello My name is John Smith, Please make sure we have got 50 characters in this message.");
 	}
 
 	public void submitForm() {
