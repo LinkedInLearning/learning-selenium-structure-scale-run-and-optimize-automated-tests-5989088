@@ -1,41 +1,53 @@
 # Chapter 03: Video 05
 
-This branch contains the code for **Chapter 03: Video 05** of the LinkedIn Learning course **"Learning Selenium: Structure, Scale, Run, and Optimize Automated Tests"**.
+This branch contains the code for **Chapter 03: Video 05** of the LinkedIn Learning course **"Learning Selenium: Structure, Scale, Run, and Optimize Automated Tests."**
 
 ## 🎯 What You'll Learn
 
-- This branch represents the state for the video.
-- Refer to the video for detailed steps and explanation.
+* The exact state of the code shown in the video
+* Refer to the video for detailed walkthroughs and explanation
 
-## ▶️ Prerequisites
+## 🛠 Prerequisites
 
-- Java 11 or higher installed
-- Maven installed (comes built-in with IntelliJ)
-- Browser(s) installed (e.g., Chrome or Firefox)
-- [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/) installed
+Make sure the following tools are installed on your machine or Codespace:
 
-## ▶️ How to Run in IntelliJ IDEA
+* Java 11 or higher
+* Maven (included with IntelliJ)
+* A modern browser (e.g., Chrome or Firefox)
+* [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/)
 
-1. **Open the Project**
+## ▶️ Running in GitHub Codespaces
 
-   - Open IntelliJ IDEA Community Edition.
-   - Click **Open** and select this project’s folder.
+1. Run the setup script to install Google Chrome:
 
-2. **Import the Maven Project**
+   ```bash
+   ./setup.sh
+   ```
 
-   - IntelliJ should detect the `pom.xml` automatically.
-   - If prompted, click **Import Maven Projects**.
+2. Set Java 21 as the default:
 
-3. **Run the Tests**
+   ```bash
+   sdk default java 21.0.7-ms
+   ```
 
-   - Navigate to the test class or package in the **Project** view.
-   - Right-click on the test or package and select **Run 'TestName'**.
-   - IntelliJ will build and run your tests, and you’ll see results in the **Run** window.
+3. Install dependencies and run tests:
+
+   ```bash
+   mvn clean install
+   ```
+
+## ▶️ Running Tests on Codespaces
+
+To run tests inside any terminal:
+
+```bash
+mvn test
+```
 
 ## 🔗 Back to [Main Course Repo](https://github.com/LinkedInLearning/learning-selenium-structure-scale-run-and-optimize-automated-tests-5989088/tree/main)
 
-## 📚 About the Course
+## 📚 About This Course
 
-This repository has branches for each video in the course.  
-Use the branch menu in GitHub to switch to a specific lesson.  
-For full course instructions, see the [README](https://github.com/LinkedInLearning/learning-selenium-structure-scale-run-and-optimize-automated-tests-5989088/blob/main/README.md) in the main branch.
+Each branch in this repository corresponds to a specific lesson in the course.
+Use the GitHub branch menu to navigate to the relevant chapter.
+For complete instructions and setup details, refer to the [main README](https://github.com/LinkedInLearning/learning-selenium-structure-scale-run-and-optimize-automated-tests-5989088/blob/main/README.md).
