@@ -29,6 +29,6 @@ public class ContactTest extends BaseTest {
 		);
 		String alertText = alert.getText().trim();
 
-		assertEquals("Thanks for your message! We will contact you shortly.", alertText);
+		assertEquals("Thanks for your messasdfadsadsfage! We will contact you shortly.", alertText);
 	}
 }

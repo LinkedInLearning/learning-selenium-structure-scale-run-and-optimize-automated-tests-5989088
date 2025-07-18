@@ -1,10 +1,10 @@
-# Chapter 04: Video 01 (Begin)
+# Chapter 04: Video 01 (End)
 
-This branch contains the code for **Chapter 04: Video 01 (Begin)** of the LinkedIn Learning course **"Learning Selenium: Structure, Scale, Run, and Optimize Automated Tests"**.
+This branch contains the code for **Chapter 04: Video 01 (End)** of the LinkedIn Learning course **"Learning Selenium: Structure, Scale, Run, and Optimize Automated Tests"**.
 
 ## 🎯 What You'll Learn
 
-- This branch represents the (Begin) state for the video.
+- This branch represents the (End) state for the video.
 - Refer to the video for detailed steps and explanation.
 
 ## ▶️ Prerequisites
