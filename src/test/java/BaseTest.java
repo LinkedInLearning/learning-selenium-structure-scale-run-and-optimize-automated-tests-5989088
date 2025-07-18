@@ -1,9 +1,5 @@
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.WebDriverRunner;
-import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,7 +8,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-@ExtendWith(ScreenShooterExtension.class)
 public class BaseTest {
 	protected WebDriver driver;
 
@@ -30,12 +25,8 @@ public class BaseTest {
 		// Headless (optional)
 		chromeOptions.addArguments("--headless=new", "--no-sandbox", "--disable-dev-shm-usage");
 
-		Configuration.browser = "chrome";
-		Configuration.browserCapabilities = chromeOptions;
 
-
-		com.codeborne.selenide.Selenide.open("about:blank");
-		driver = WebDriverRunner.getWebDriver();
+		driver = new ChromeDriver(chromeOptions);
 	}
 
 	@AfterEach

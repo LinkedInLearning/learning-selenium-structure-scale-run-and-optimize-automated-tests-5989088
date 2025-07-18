@@ -15,12 +15,6 @@
     </properties>
 	<dependencies>
 		<dependency>
-			<groupId>com.codeborne</groupId>
-			<artifactId>selenide</artifactId>
-			<version>7.3.1</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.25.0</version>
