@@ -35,6 +35,3 @@ sudo apt install -y \
 
 echo "✅ Chrome installed:"
 google-chrome --version
-
-echo "Using correct Java Version"
-sdk default java 21.0.7-ms
