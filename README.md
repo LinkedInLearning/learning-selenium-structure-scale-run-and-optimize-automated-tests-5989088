@@ -5,6 +5,8 @@ This is the repository for the LinkedIn Learning course `Learning Selenium: Stru
 
 ## Course Description
 
+In this course, Playwright test automation specialist Qambar Raza guides you through the essentials of Selenium, a cornerstone of browser test automation, including how to write and run tests on both local machines and cloud-based platforms like GitHub Actions. Learn how to set up Selenium, grasp the intricacies of debugging, and capture evidence of test failures using screenshots. Gain proficiency in structuring tests with page object models and optimizing test execution through parallelization and Selenium Grid. Explore the techniques for leveraging Selenium Manager and integrating wire mock for efficient testing workflows. With each lesson building on the previous, this course actively engages you in fixing, coding, and running tests as a real-world test automation engineer.
+
 _See the readme file in the main branch for updated instructions and information._
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
@@ -24,25 +26,19 @@ To resolve this issue:
     Add changes to git using this command: git add .
 	Commit changes using this command: git commit -m "some message"
 
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
-
 ## Instructor
 
-Instructor name
+Qambar Raza
 
-Instructor description
+Playwright Test Automation Specialist, Content Creator
 
                             
 
-Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/).
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/qambar-raza?u=104).
 
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG0eDHsyOSqTA/learning-public-crop_675_1200/B4EZVdqqdwHUAY-/0/1741033220778?e=2147483647&v=beta&t=FxUDo6FA8W8CiFROwqfZKL_mzQhYx9loYLfjN-LNjgA
+[lil-course-url]: https://www.linkedin.com/learning/learning-selenium-structure-scale-run-and-optimize-automated-tests
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D560DAQGblcfQboVDhA/learning-public-crop_675_1200/B56ZiFYB7uH0AY-/0/1754584326185?e=2147483647&v=beta&t=NjRx9jtLJZh04d4RmoKVzN2MizAHQUlChsJ0460S6Gw
 
